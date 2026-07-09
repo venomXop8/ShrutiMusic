@@ -19,9 +19,11 @@
 # Contact for permissions:
 # Email: badboy809075@gmail.com
 
-
 import asyncio
 import importlib
+import os
+import threading
+from flask import Flask, jsonify
 from pyrogram import idle
 from pyrogram.types import BotCommand
 from pytgcalls.exceptions import NoActiveGroupCall
@@ -32,6 +34,26 @@ from ShrutiMusic.misc import sudo
 from ShrutiMusic.plugins import ALL_MODULES
 from ShrutiMusic.utils.database import get_banned_users, get_gbanned
 from config import BANNED_USERS
+
+# Flask app for keeping the bot alive
+app_flask = Flask(__name__)
+
+@app_flask.route('/')
+def home():
+    return jsonify({
+        "status": "alive",
+        "bot": "ShrutiMusic",
+        "owner": "Nand Yaduwanshi (NoxxOP)",
+        "message": "Bot is running successfully!"
+    })
+
+@app_flask.route('/health')
+def health():
+    return jsonify({"status": "healthy"}), 200
+
+def run_flask():
+    port = int(os.environ.get('PORT', 5000))
+    app_flask.run(host='0.0.0.0', port=port)
 
 COMMANDS = [
     BotCommand("start", "❖ sᴛᴀʀᴛ ʙᴏᴛ • ᴛᴏ sᴛᴀʀᴛ ᴛʜᴇ ʙᴏᴛ"),
@@ -133,8 +155,13 @@ async def init():
     LOGGER("ShrutiMusic").info("Stopping Shruti Music Bot...🥺")
 
 if __name__ == "__main__":
+    # Start Flask server in a separate thread
+    flask_thread = threading.Thread(target=run_flask)
+    flask_thread.daemon = True
+    flask_thread.start()
+    
+    # Run the bot
     asyncio.get_event_loop().run_until_complete(init())
-
 
 # ©️ Copyright Reserved - @NoxxOP  Nand Yaduwanshi
 
@@ -143,6 +170,5 @@ if __name__ == "__main__":
 # 🔗 GitHub : https://github.com/NoxxOP/ShrutiMusic
 # 📢 Telegram Channel : https://t.me/ShrutiBots
 # ===========================================
-
 
 # ❤️ Love From ShrutiBots
