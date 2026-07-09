@@ -9,15 +9,15 @@ API_ID = int(os.getenv("API_ID"))
 API_HASH = os.getenv("API_HASH")
 BOT_TOKEN = os.getenv("BOT_TOKEN")
 OWNER_ID = int(os.getenv("OWNER_ID", None))
-OWNER_USERNAME = os.getenv("OWNER_USERNAME", "WTF_WhyMeeh")
-BOT_USERNAME = os.getenv("BOT_USERNAME", "ShrutixMusicBot")
+OWNER_USERNAME = os.getenv("OWNER_USERNAME", "venomxop8")
+BOT_USERNAME = os.getenv("BOT_USERNAME", "safexmusicbot")
 
 MONGO_DB_URI = os.getenv("MONGO_DB_URI", None)
 LOG_GROUP_ID = int(os.getenv("LOG_GROUP_ID", None))
 HEROKU_APP_NAME = os.getenv("HEROKU_APP_NAME")
 HEROKU_API_KEY = os.getenv("HEROKU_API_KEY")
 
-UPSTREAM_REPO = os.getenv("UPSTREAM_REPO", "https://github.com/NoxxOP/ShrutiMusic")
+UPSTREAM_REPO = os.getenv("UPSTREAM_REPO", "https://github.com/venomxop/ShrutiMusic")
 UPSTREAM_BRANCH = os.getenv("UPSTREAM_BRANCH", "main")
 GIT_TOKEN = os.getenv("GIT_TOKEN", None)
 
@@ -46,18 +46,18 @@ STRING5 = os.getenv("STRING_SESSION5", None)
 
 AUTO_LEAVING_ASSISTANT = bool(os.getenv("AUTO_LEAVING_ASSISTANT", False))
 
-START_IMG_URL = os.getenv("START_IMG_URL", "https://files.catbox.moe/7q8bfg.jpg")
-PING_IMG_URL = "https://files.catbox.moe/eehxb4.jpg"
-PLAYLIST_IMG_URL = "https://files.catbox.moe/eehxb4.jpg"
-STATS_IMG_URL = "https://files.catbox.moe/eehxb4.jpg"
-TELEGRAM_AUDIO_URL = "https://files.catbox.moe/eehxb4.jpg"
-TELEGRAM_VIDEO_URL = "https://files.catbox.moe/eehxb4.jpg"
-STREAM_IMG_URL = "https://files.catbox.moe/eehxb4.jpg"
-SOUNCLOUD_IMG_URL = "https://files.catbox.moe/eehxb4.jpg"
-YOUTUBE_IMG_URL = "https://files.catbox.moe/eehxb4.jpg"
-SPOTIFY_ARTIST_IMG_URL = "https://files.catbox.moe/eehxb4.jpg"
-SPOTIFY_ALBUM_IMG_URL = "https://files.catbox.moe/eehxb4.jpg"
-SPOTIFY_PLAYLIST_IMG_URL = "https://files.catbox.moe/eehxb4.jpg"
+START_IMG_URL = os.getenv("START_IMG_URL", "https://iili.io/ClcCK4s.jpg")
+PING_IMG_URL = "https://iili.io/ClcCK4s.jpg"
+PLAYLIST_IMG_URL = "https://iili.io/ClcCK4s.jpg"
+STATS_IMG_URL = "https://iili.io/ClcCK4s.jpg"
+TELEGRAM_AUDIO_URL = "https://iili.io/ClcCK4s.jpg"
+TELEGRAM_VIDEO_URL = "https://iili.io/ClcCK4s.jpg"
+STREAM_IMG_URL = "https://iili.io/ClcCK4s.jpg"
+SOUNCLOUD_IMG_URL = "https://iili.io/ClcCK4s.jpg"
+YOUTUBE_IMG_URL = "https://iili.io/ClcCK4s.jpg"
+SPOTIFY_ARTIST_IMG_URL = "https://iili.io/ClcCK4s.jpg"
+SPOTIFY_ALBUM_IMG_URL = "https://iili.io/ClcCK4s.jpg"
+SPOTIFY_PLAYLIST_IMG_URL = "https://iili.io/ClcCK4s.jpg"
 
 BANNED_USERS = filters.user()
 adminlist = {}
