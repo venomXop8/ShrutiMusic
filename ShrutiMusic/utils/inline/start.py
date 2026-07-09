@@ -32,7 +32,6 @@ def start_panel(_):
             InlineKeyboardButton(text=_["S_B_2"], url=config.SUPPORT_GROUP),
         ],
         [
-            InlineKeyboardButton(text=_["E_X_1"], url=config.UPSTREAM_REPO),
             InlineKeyboardButton(text=_["S_B_11"], callback_data="about_page")  # About button
         ],
     ]
@@ -83,10 +82,6 @@ def about_panel(_):
 
 def owner_panel(_):
     buttons = [
-        [
-            InlineKeyboardButton(text=_["S_H_1"], url=config.INSTAGRAM),
-            InlineKeyboardButton(text=_["S_H_2"], url=config.YOUTUBE),
-        ],
         [
             InlineKeyboardButton(text=_["S_H_3"], url=config.GITHUB),
             InlineKeyboardButton(text=_["S_H_4"], url=config.DONATE),
